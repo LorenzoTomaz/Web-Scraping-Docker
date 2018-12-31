@@ -1,44 +1,3 @@
-## Web Scraping Docker
-
-Dockerfile genérico para criar uma imagem docker com python, selenium, chrome, Xfvb, cron e muito mais.
-
-### Conteúdo
-
-
-Esta imagem possui as seguintes dependências:
-
-- Chrome e chromedriver
-- Firefox e geckodriver
-- PhantomJS webkit
-- Selenium
-- Python 3
-- Xvfb e pyvirtualdisplay
-- nano
-- cron
-
-
-### Criando a Imagem:
-
-- docker
-    ```
-    sudo docker image build -t (nome do container)
-
-    sudo docker run -v /etc/localtime:/etc/localtime:ro -it (nome do container) /bin/bash 
-
-    /etc/init.d/cron start
-
-    ```
-
-- docker-compose
-
-    ```
-    docker-compose stop && docker-compose build && docker-compose up -d
-    ```
-    
-    
-### Exemplo
-
-```python
 import os
 import logging
 
@@ -79,5 +38,3 @@ def scraping_title():
 
 if __name__ == '__main__':
     scraping_title()
-```
-
